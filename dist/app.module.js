@@ -10,15 +10,12 @@ exports.AppModule = void 0;
 const common_1 = require("@nestjs/common");
 const app_controller_1 = require("./app.controller");
 const app_service_1 = require("./app.service");
-const devtools_integration_1 = require("@nestjs/devtools-integration");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
 exports.AppModule = AppModule = __decorate([
     (0, common_1.Module)({
-        imports: [devtools_integration_1.DevtoolsModule.register({
-                http: process.env.NODE_ENV !== 'production',
-            }),],
+        imports: [],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],
     })
